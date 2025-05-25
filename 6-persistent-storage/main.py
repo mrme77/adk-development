@@ -10,7 +10,9 @@ load_dotenv()
 
 # ===== PART 1: Initialize Persistent Session Service =====
 # Using SQLite database for persistent storage
-db_url = "sqlite:///./my_agent_data.db"
+#db_url = "sqlite:///./my_agent_data.db"
+db_url = "sqlite:////Users/pasqualesalomone/Documents/VerrtexAI/adk-development/6-persistent-storage/my_agent_data.db"
+
 session_service = DatabaseSessionService(db_url=db_url)
 
 
