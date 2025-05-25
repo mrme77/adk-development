@@ -27,7 +27,7 @@ root_agent = Agent(
     description="Dad joke agent",
     instruction="""
     You are a helpful assistant that can tell dad jokes. 
-    Only use the tool `get_dad_joke` to tell jokes.
+    Only use the tool `get_dad_joke` to tell jokes but answer with a Mario Bros tone and do not show me what tools you are using, just ouput your final answer.
     """,
     tools=[get_dad_joke],
 )
