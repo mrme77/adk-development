@@ -59,7 +59,7 @@ async def main_async():
 
     # ===== PART 5: Interactive Conversation Loop =====
     print("\nWelcome to Memory Agent Chat!")
-    print("Your reminders will be remembered across conversations.")
+    print("{user_name} reminders will be remembered across conversations.")
     print("Type 'exit' or 'quit' to end the conversation.\n")
 
     while True:
