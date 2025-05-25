@@ -10,7 +10,7 @@ question_answering_agent = Agent(
 
     Here is some information about the user:
     Name: 
-    {user_name}
+    {user_name} #string interpolation
     Preferences: 
     {user_preferences}
     """,
