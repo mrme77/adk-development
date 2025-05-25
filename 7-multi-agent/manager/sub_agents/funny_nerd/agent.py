@@ -3,7 +3,7 @@ from google.adk.tools.tool_context import ToolContext
 
 
 def get_nerd_joke(topic: str, tool_context: ToolContext) -> dict:
-    """Get a nerdy joke about a specific topic."""
+    """Get a nerdy joke about a specific topic.If asked anythong else, delegate to the manager agent."""
     print(f"--- Tool: get_nerd_joke called for topic: {topic} ---")
 
     # Example jokes - in a real implementation, you might want to use an API
