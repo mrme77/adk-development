@@ -1,5 +1,5 @@
 import asyncio
-
+import os
 from dotenv import load_dotenv
 from google.adk.runners import Runner
 from google.adk.sessions import DatabaseSessionService
@@ -10,11 +10,11 @@ load_dotenv()
 
 # ===== PART 1: Initialize Persistent Session Service =====
 # Using SQLite database for persistent storage
-#db_url = "sqlite:///./my_agent_data.db"
-db_url = "sqlite:////Users/pasqualesalomone/Documents/VerrtexAI/adk-development/6-persistent-storage/my_agent_data.db"
+db_url = "sqlite:///./my_agent_data.db"
+#db_url = "sqlite:////Users/pasqualesalomone/Documents/VerrtexAI/adk-development/6-persistent-storage/my_agent_data.db"
 
 session_service = DatabaseSessionService(db_url=db_url)
-
+# Create the directory structure if it doesn't exist
 
 # ===== PART 2: Define Initial State =====
 # This will only be used when creating a new session
@@ -61,7 +61,7 @@ async def main_async():
 
     # ===== PART 5: Interactive Conversation Loop =====
     print("\nWelcome to Memory Agent Chat!")
-    print("{user_name} reminders will be remembered across conversations.")
+    print("These reminders will be remembered across conversations.")
     print("Type 'exit' or 'quit' to end the conversation.\n")
 
     while True:
